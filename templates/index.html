@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <title>Bellybutton Plots</title>
+</head>
+<body>
+
+    <div class='container' style="padding-top: 20px;">
+        
+                <div class = "row" style="height: 200px">
+                    <div class="col-sm-3 col-sm-offset-1 col-xs-4 text-center" style="height: 200px; padding-top: 20px;">
+                        
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                        <div id="metaData"></div>
+                    </div>
+                    <div class = "col-sm-4 col-xs-8 ">
+                        <div class = "jumbotron">
+                            <h2 class="text-center">Bellybutton Bacteria</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = 'row' style="height: 100%">
+                    <div class="col-sm-7 col-xs-12">
+                        <div id="bubble"></div>
+                    </div>  
+                    <div class="col-sm-5 col-xs-12">
+                        <div id="pie"></div>
+                    </div>
+                </div>
+
+
+    </div>  
+</body>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</html>
